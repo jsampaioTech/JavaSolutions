@@ -2,7 +2,6 @@ package resources.sortingballs;
 
 public class BallList{
 
-	private int maxElements = 16;
 	private int size=0;
 	private Ball[] balls;
 
@@ -29,12 +28,6 @@ public class BallList{
 				return true;
 			}
 		}
-		return false;
-	}
-	
-	public boolean isValidSize(int length){
-		if(length < maxElements)
-			return true;
 		return false;
 	}
 	

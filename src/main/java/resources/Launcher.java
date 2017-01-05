@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import resources.sortingballs.Ball;
 import resources.sortingballs.BallList;
+import resources.spellsitout.NumberWord;
 
 public class Launcher {
 
@@ -67,7 +68,7 @@ public class Launcher {
 				int numberball = sc.nextInt();
 				Ball ball = new Ball(numberball);
 
-				if(!ballList.containsBall(ball) && ballList.isValidSize(ballList.getBalls().length) && ball.isValidNumber(numberball)){
+				if(!ballList.containsBall(ball) && ball.isValidNumber(numberball)){
 					ballList.addBall(ball);
 					System.out.println(OUTPUT);
 					ballList.printBallsArray();
@@ -83,6 +84,27 @@ public class Launcher {
 
 	//run spells it out exercise
 	public void runSpellsItOut() throws IOException{
+		sc = null;
+		
+		try{
+			sc = new Scanner(System.in);
+			System.out.println(PRESS_ENTER_START);
+
+			while (!(sc.nextLine().equals(EXIT))) {
+				System.out.println(INSERT_NUMBER);
+				int number = sc.nextInt();
+				NumberWord numberWord = new NumberWord(number);
+				
+				if(numberWord.getTranslation() == null){
+					System.out.println(INVALID_INPUT);
+				}else{
+					System.out.println(OUTPUT);
+					System.out.println(numberWord.getTranslation());
+				}
+			}
+		}finally{
+			closeScanner();
+		}
 	}
 
 	private void closeScanner() {

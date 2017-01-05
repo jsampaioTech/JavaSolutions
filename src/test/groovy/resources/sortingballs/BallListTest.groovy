@@ -41,32 +41,6 @@ public class BallListTest extends Specification {
 		!result
 	}
 	
-	def "cehck isValidSize with a length higher than the possible elements"(){
-		boolean result
-		
-		given:
-		def length = 23
-		
-		when:
-		result = testObj.isValidSize(length)
-		
-		then: "returns false"
-		!result
-	}
-	
-	def "cehck isValidSize with a valid length"(){
-		boolean result
-		
-		given:
-		def length = 12
-		
-		when:
-		result = testObj.isValidSize(length)
-		
-		then: "returns true"
-		result
-	}
-	
 	def "Add one element to array and verify array"(){
 		
 		given:
