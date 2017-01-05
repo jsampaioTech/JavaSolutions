@@ -1,3 +1,17 @@
+- BUILD
+
+DEPENDENCIES:
+Spock framework and Groovy to the unit tests
+
+To get all dependencies run these commands in the terminal:
+
+$gradle cleanEclipse eclipse
+$gradle build
+
+To run all the unit tests with the spock framework, just need run:
+
+$gradle test
+
 - The main method is in the MainController class 
 
 - Running the java application, a simple text scanner is launched in the terminal. 
@@ -10,5 +24,4 @@
 - Sorting Balls Source Code Options 
 		- To sort the list of balls, I choose to use the quicksort algorithm because in the notes says to avoid the java.util library.
 	In this case I would use List or LinkedList for easier development.
-		
 
